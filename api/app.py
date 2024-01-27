@@ -1,14 +1,21 @@
 from flask import Flask, request, jsonify
-import pandas as pd
-import torch
-from transformers import AutoModelForSequenceClassification, AutoTokenizer, pipeline
+from utils import create_pipeline
+import os
 
 app = Flask(__name__)
+basedir = os.path.abspath(os.path.dirname(__file__))
+pipe = create_pipeline(
+    pretrained="bert-base-uncased",
+    path_to_trained_model=os.path.join(basedir, "pytorch_models/bert_trained/pytorch_model.bin")
+)
 
 
 @app.route('/', methods=['POST'])
 def index():
-    return 'Hello World!'
+    if request.method == 'POST':
+        data = request.get_json().get('tokens')
+        pred = pipe(data)
+        return pred
 
 
 if __name__ == '__main__':
