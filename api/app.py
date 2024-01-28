@@ -1,8 +1,11 @@
 from flask import Flask, request, jsonify
 from utils import create_pipeline
 import os
+from flask_cors import CORS
+
 
 app = Flask(__name__)
+CORS(app)
 basedir = os.path.abspath(os.path.dirname(__file__))
 pipe = create_pipeline(
     pretrained="bert-base-uncased",
