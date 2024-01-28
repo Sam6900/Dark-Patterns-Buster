@@ -6,7 +6,7 @@ app = Flask(__name__)
 basedir = os.path.abspath(os.path.dirname(__file__))
 pipe = create_pipeline(
     pretrained="bert-base-uncased",
-    path_to_trained_model=os.path.join(basedir, "pytorch_models/bert_trained/pytorch_model.bin")
+    path_to_trained_model=os.path.join(basedir, "trained_models/bert_trained/pytorch_model.bin")
 )
 
 

@@ -1,0 +1,1 @@
+const ignoredElements = ["script", "style", "noscript", "br", "hr", "code", "nav", "span"];
