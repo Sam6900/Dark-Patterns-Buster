@@ -1,22 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Raleway&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=League+Gothic&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>ClearSpy</title>
 </head>
 
 <body>
-    <div class="modal-header">
-        <h1>ClearSpy</h1>
-    </div>
-    <div class="modal-content">
-        <button class="scrap-button" type="button">ANALYZE SITE</button>
+    <div class="bg">
+        <div class="header">
+            <img src="images/logo.png" alt="">
+            <span>ClearSpy</span>
+        </div>
+        <div class="power-btn-container">
+            <button id="power-btn">
+                <img id="pw" src="images/button-power-off.png" alt="Power Button">
+            </button>
+            <p id="powerBtnText">OFF</p>
+        </div>
+        <div class="functional-container">
+            <div class="dark-pattern-count">
+                <p>Dark Pattern Count</p>
+                <p id="dark-pattern-count">0</p>
+            </div>
+            <div class="highlight-pattern">
+                <p>Highlight Pattern</p>
+                <label class="toggle-switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label>
+            </div>
+            <div class="locate-pattern">
+                <p>Locate Pattern</p>
+                <img id="decrement"src="images/Path (1).png" alt="decrement">
+                <p id="dynamic">0</p>
+                <img id="increment"src="images/Path.png" alt="increment">
+            </div>
+        </div>
+        <div class="link">
+            <a href="https://www.deceptive.design/types" target="_blank">Supported Dark Patterns Types</a>
+        </div>
+        <div class="hyperlinks">
+            <span class="format">
+                <a href="https://www.deceptive.design/types/disguised-ads" target="_blank">Disguised ads |</a>
+                <a href="https://www.deceptive.design/types/fake-social-proof" target="_blank">Fake social proof |</a>
+                <a href="https://www.deceptive.design/types/fake-urgency" target="_blank">Fake urgency |</a>
+                <a href="https://www.deceptive.design/types/forced-action" target="_blank">Forced action |</a>
+                <a href="https://deceptive.design/types/hidden-costs" target="_blank">Hidden Costs |</a>
+                <a href="https://www.deceptive.design/types/sneaking" target="_blank">Sneaking |</a>
+                <a href="https://www.deceptive.design/types/trick-wording" target="_blank">Trick wording</a>
+            </span>
+        </div>
     </div>
     <script src="popup.js"></script>
 </body>

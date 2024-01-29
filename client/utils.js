@@ -30,5 +30,3 @@ function scrapeText() {
     console.log(filteredTexts);
 	return {filteredNodes, filteredTexts};
 }
-
-

@@ -1,34 +1,213 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
 
-.modal-header {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-  }
-  
-  .modal-header h1 {
-    margin: 0;
-  }
-  
-  .modal-content {
-    text-align: center;
-    padding: 20px;
-  }
-  
-  .scrap-button {
-    background-color: #4CAF50;
-    color: #fff;
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    font-family: 'poppins';
-  }
-  
-  .scrap-button:hover {
-    background-color: #45a049;
-  }
+a {
+  font-size: 12px;
+}
 
+.bg {
+  height: 300px;
+  width: 250px;
+  background-color: #ffffff;
+  padding: 5px;
+}
 
-  
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.header img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.header span {
+  font-family: "League Gothic", sans-serif;
+  margin-left: 1px;
+  font-size: 30px;
+}
+
+.power-btn-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  padding: 10px;
+}
+
+#power-btn {
+  border: none;
+  background: #ffffff;
+  cursor: pointer;
+  position: relative;
+}
+
+#power-btn img {
+  width: 35px;
+  height: 35px;
+}
+
+#powerBtnText {
+  position: absolute;
+  top: 120px;
+  font-family: "League Gothic", sans-serif;
+  font-size: 20px;
+}
+
+.functional-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.functional-container > div {
+  background-color: #d9d9d9;
+  border-radius: 10px;
+  text-align: center;
+  margin: 10px;
+  width: 95%;
+  box-shadow: 0 4px 6px rgba(1, 1, 1, 0.5);
+  padding-top: 4%;
+  padding-bottom: 4%;
+}
+
+.functional-container > div > p {
+  font-weight: bold;
+  margin: 0;
+}
+
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 10px;
+  margin-top: 5px;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  border-radius: 20px;
+  transition: 0.4s;
+  border: 1px solid #726969;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 6px;
+  width: 6px;
+  left: 2px;
+  bottom: 1px;
+  background-color: #7e9091;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #db5c00;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #db5c00;
+}
+
+input:checked + .slider:before {
+  transform: translateX(16px);
+}
+
+#dark-pattern-count {
+  color: #db5c00;
+}
+
+.link {
+  margin-top: 20px;
+  margin-bottom: 5px;
+  font-size: 10px;
+  text-align: center;
+}
+.link a {
+  color: #db5c00;
+  text-decoration: none;
+}
+
+.link a:hover {
+  text-decoration: underline;
+}
+
+.link p {
+  padding: 10px;
+  text-align: center;
+}
+
+.hyperlinks {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.format {
+  text-align: center;
+}
+
+.format a {
+  text-align: center;
+}
+.format a:hover {
+  color: #000000;
+  text-decoration: underline;
+}
+.hyperlinks a {
+  color: #000000;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.functional-container > .locate-pattern {
+  width: 50%;
+  padding-right: 5%;
+}
+
+.functional-container > div:nth-child(3) {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  /* padding: 15px; */
+}
+
+.locate-pattern p {
+  padding: 10px;
+}
+
+.functional-container .dark-pattern-count {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.functional-container .highlight-pattern {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
